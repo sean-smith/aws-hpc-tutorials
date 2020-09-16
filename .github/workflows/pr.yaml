@@ -3,7 +3,6 @@ on:
   pull_request:
     branches:
       - master
-    types: [review_requested]
 
 jobs:
   deploy:
@@ -26,7 +25,7 @@ jobs:
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        GITHUB_TOKEN: ${{ secrets.GITHUBTOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         AmplifyAppId: ${{ secrets.AMPLIFYAPPID }}
         BackendEnvARN: ${{ secrets.BACKENDENVARN }}
         AWS_REGION: 'us-east-1'
